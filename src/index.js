@@ -30,6 +30,10 @@ refs.body.classList.add(
     localStorage.getItem('theme') ? localStorage.getItem('theme') : Theme.LIGHT
 );
 
+if(refs.body.classList.contains(Theme.DARK)) {
+    refs.checkBoxTheme.checked = true;
+}
+
 refs.checkBoxTheme.addEventListener('change', toggleTheme);
 
 function toggleTheme(e) {
